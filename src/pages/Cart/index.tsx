@@ -39,7 +39,8 @@ const Cart = (): JSX.Element => {
   }
 
   function handleRemoveProduct(productId: number) {
-    // TODO
+  
+    
   }
 
   return (
