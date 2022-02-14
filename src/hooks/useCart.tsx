@@ -100,8 +100,9 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
     amount,
   }: UpdateProductAmount) => {
     try {
-      if(amount <= 0) {
-        return;
+      if(amount < 1) {
+        toast.error('Erro na alteração da quantidade');  
+        return
       }
 
       const stock = await api.get(`/stock/${productId}`);
